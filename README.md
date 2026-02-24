@@ -1,8 +1,118 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ResearchForge — AI-Powered Research & Innovation Lab
 
-## Getting Started
+A production-ready Next.js 16 website for **ResearchForge**, built with TypeScript, Tailwind CSS v4, and the App Router.
 
-First, run the development server:
+---
+
+## Tech Stack
+
+| Layer      | Technology               |
+|------------|--------------------------|
+| Framework  | Next.js 16 (App Router)  |
+| Language   | TypeScript 5             |
+| Styling    | Tailwind CSS v4          |
+| Runtime    | React 19                 |
+| Font       | Inter (Google Fonts)     |
+
+---
+
+## Folder Structure
+
+```
+app/
+  globals.css             # Tailwind v4 theme, animations, utilities
+  layout.tsx              # Root layout with Navbar, Footer, WhatsApp
+  page.tsx                # Home (/)
+  about/page.tsx          # About (/about)
+  services/page.tsx       # Services (/services)
+  contact/page.tsx        # Contact (/contact)
+  privacy/page.tsx        # Privacy Policy
+  terms/page.tsx          # Terms of Service
+  api/contact/route.ts    # POST /api/contact — ready for MongoDB
+
+components/
+  Navbar.tsx              # Sticky responsive navbar + hamburger menu
+  Footer.tsx              # Footer with links, contact, social icons
+  WhatsAppButton.tsx      # Floating WhatsApp CTA
+  ServiceCard.tsx         # Reusable card (grid + full variants)
+  ContactForm.tsx         # Validated form with client-side + server validation
+
+lib/
+  metadata.ts             # SEO metadata factory + siteConfig
+  constants.ts            # Services, process steps, testimonials data
+
+types/
+  index.ts                # Shared TypeScript interfaces
+```
+
+---
+
+## Running Locally
+
+```bash
+# Install dependencies
+npm install
+
+# Start dev server
+npm run dev
+# → http://localhost:3000
+
+# Production build
+npm run build && npm run start
+
+# Type check
+npx tsc --noEmit
+```
+
+---
+
+## Environment Variables
+
+Create `.env.local`:
+
+```env
+NEXT_PUBLIC_BASE_URL=https://researchforge.in
+MONGODB_URI=mongodb+srv://user:pass@cluster.mongodb.net/researchforge
+RESEND_API_KEY=re_xxxxxxxxxxxx
+EMAIL_TO=contact@researchforge.in
+```
+
+---
+
+## Customisation Checklist
+
+- [ ] Update email + WhatsApp in `lib/metadata.ts`
+- [ ] Add `public/og-image.png` (1200×630) for Open Graph
+- [ ] Add `public/favicon.ico` and `public/apple-touch-icon.png`
+- [ ] Replace testimonials in `lib/constants.ts` with real quotes
+- [ ] Connect MongoDB — see commented TODO in `app/api/contact/route.ts`
+- [ ] Add Resend/Nodemailer for email notifications
+
+---
+
+## Deploying on DigitalOcean (App Platform)
+
+1. Push to GitHub.
+2. Open [DigitalOcean App Platform](https://cloud.digitalocean.com/apps) → **Create App**.
+3. Select repo → set **Build Command:** `npm run build`, **Run Command:** `npm run start`.
+4. Add environment variables in **Settings → App-Level Env Vars**.
+5. Choose plan (Basic $5/mo) → **Deploy**.
+6. Add custom domain + enable HTTPS (automatic).
+
+### Droplet (manual)
+
+```bash
+npm install -g pm2
+npm install && npm run build
+pm2 start npm --name "researchforge" -- start
+pm2 save && pm2 startup
+# Configure nginx reverse proxy on port 3000
+# sudo certbot --nginx -d researchforge.in
+```
+
+---
+
+© 2026 ResearchForge. All rights reserved.
 
 ```bash
 npm run dev
