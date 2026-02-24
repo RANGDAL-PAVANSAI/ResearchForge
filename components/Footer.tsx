@@ -70,7 +70,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="w-9 h-9 rounded-lg bg-[#111827] border border-[#1E2A3D] flex items-center justify-center text-gray-400 hover:text-blue-400 hover:border-blue-500/40 transition-all duration-200"
+                  className="w-9 h-9 rounded-lg bg-brand-surface border border-[#1E2A3D] flex items-center justify-center text-gray-400 hover:text-blue-400 hover:border-blue-500/40 transition-all duration-200"
                 >
                   {icon}
                 </a>
@@ -129,7 +129,7 @@ export default function Footer() {
                 className="flex items-start gap-3 text-gray-400 text-sm hover:text-blue-400 transition-colors group"
               >
                 <span
-                  className="mt-0.5 w-8 h-8 rounded-lg bg-[#111827] border border-[#1E2A3D] flex items-center justify-center text-blue-400 shrink-0 group-hover:border-blue-500/40"
+                  className="mt-0.5 w-8 h-8 rounded-lg bg-brand-surface border border-[#1E2A3D] flex items-center justify-center text-blue-400 shrink-0 group-hover:border-blue-500/40"
                   aria-hidden="true"
                 >
                   ✉️
@@ -143,7 +143,7 @@ export default function Footer() {
                 className="flex items-start gap-3 text-gray-400 text-sm hover:text-green-400 transition-colors group"
               >
                 <span
-                  className="mt-0.5 w-8 h-8 rounded-lg bg-[#111827] border border-[#1E2A3D] flex items-center justify-center shrink-0 group-hover:border-green-500/40"
+                  className="mt-0.5 w-8 h-8 rounded-lg bg-brand-surface border border-[#1E2A3D] flex items-center justify-center shrink-0 group-hover:border-green-500/40"
                   aria-hidden="true"
                 >
                   💬
@@ -152,7 +152,7 @@ export default function Footer() {
               </a>
               <div className="flex items-start gap-3 text-gray-400 text-sm">
                 <span
-                  className="mt-0.5 w-8 h-8 rounded-lg bg-[#111827] border border-[#1E2A3D] flex items-center justify-center shrink-0"
+                  className="mt-0.5 w-8 h-8 rounded-lg bg-brand-surface border border-[#1E2A3D] flex items-center justify-center shrink-0"
                   aria-hidden="true"
                 >
                   📍

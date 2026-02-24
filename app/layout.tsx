@@ -1,57 +1,57 @@
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import './globals.css';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
-import WhatsAppButton from '@/components/WhatsAppButton';
-import { siteConfig } from '@/lib/metadata';
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
+import { siteConfig } from "@/lib/metadata";
 
 const inter = Inter({
-  subsets:  ['latin'],
-  variable: '--font-sans',
-  display:  'swap',
+  subsets: ["latin"],
+  variable: "--font-sans",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default:  `${siteConfig.name} – ${siteConfig.tagline}`,
+    default: `${siteConfig.name} – ${siteConfig.tagline}`,
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
-  keywords:    siteConfig.keywords,
-  authors:     [{ name: siteConfig.name, url: siteConfig.url }],
+  keywords: siteConfig.keywords,
+  authors: [{ name: siteConfig.name, url: siteConfig.url }],
   openGraph: {
-    type:      'website',
-    locale:    'en_IN',
-    url:       siteConfig.url,
-    siteName:  siteConfig.name,
-    title:     `${siteConfig.name} – ${siteConfig.tagline}`,
+    type: "website",
+    locale: "en_IN",
+    url: siteConfig.url,
+    siteName: siteConfig.name,
+    title: `${siteConfig.name} – ${siteConfig.tagline}`,
     description: siteConfig.description,
     images: [
       {
-        url:    siteConfig.ogImage,
-        width:  1200,
+        url: siteConfig.ogImage,
+        width: 1200,
         height: 630,
-        alt:    `${siteConfig.name} – ${siteConfig.tagline}`,
+        alt: `${siteConfig.name} – ${siteConfig.tagline}`,
       },
     ],
   },
   twitter: {
-    card:    'summary_large_image',
-    title:   `${siteConfig.name} – ${siteConfig.tagline}`,
+    card: "summary_large_image",
+    title: `${siteConfig.name} – ${siteConfig.tagline}`,
     description: siteConfig.description,
-    images:  [siteConfig.ogImage],
+    images: [siteConfig.ogImage],
     creator: siteConfig.twitterHandle,
   },
   robots: {
-    index:     true,
-    follow:    true,
+    index: true,
+    follow: true,
     googleBot: { index: true, follow: true },
   },
   icons: {
-    icon:  '/favicon.ico',
-    apple: '/apple-touch-icon.png',
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
 };
 

@@ -6,13 +6,13 @@ A production-ready Next.js 16 website for **ResearchForge**, built with TypeScri
 
 ## Tech Stack
 
-| Layer      | Technology               |
-|------------|--------------------------|
-| Framework  | Next.js 16 (App Router)  |
-| Language   | TypeScript 5             |
-| Styling    | Tailwind CSS v4          |
-| Runtime    | React 19                 |
-| Font       | Inter (Google Fonts)     |
+| Layer     | Technology              |
+| --------- | ----------------------- |
+| Framework | Next.js 16 (App Router) |
+| Language  | TypeScript 5            |
+| Styling   | Tailwind CSS v4         |
+| Runtime   | React 19                |
+| Font      | Inter (Google Fonts)    |
 
 ---
 
