@@ -1,13 +1,11 @@
-# Netlify configuration for Next.js
 [build]
   command = "npm run build"
-  publish = ".next"
+  publish = ".next/standalone"
+  functions = ".next/server"
 
-[build.environment]
-  NODE_VERSION = "20"
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
 
-# Redirects for Next.js routing
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+[functions]
+  node_bundler = "zisi"
+  external_node_modules = ["next"]
