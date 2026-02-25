@@ -1,11 +1,6 @@
 [build]
   command = "npm run build"
-  publish = ".next/standalone"
-  functions = ".next/server"
+  publish = ".next"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
-
-[functions]
-  node_bundler = "zisi"
-  external_node_modules = ["next"]

@@ -1,9 +1,6 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // ── Build output for Netlify ──────────────────────────────────────────────
-  output: "standalone",
-
   // ── Performance ───────────────────────────────────────────────────────────
   compress: true,
   poweredByHeader: false,
